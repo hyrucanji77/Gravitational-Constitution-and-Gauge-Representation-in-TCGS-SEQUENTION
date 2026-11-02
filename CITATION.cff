@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "Please cite the manuscript and the immutable computational snapshot used."
+type: software
+title: "Gravitational Constitution and Gauge Representation in TCGS–SEQUENTION: Computational Supplement"
+authors:
+  - family-names: "Arellano-Peña"
+    given-names: "Henry"
+version: "4"
+date-released: 2026-11-01
+license: CC-BY-4.0
+repository-code: "https://github.com/hyrucanji77/Gravitational-Constitution-and-Gauge-Representation-in-TCGS-SEQUENTION"
+url: "https://github.com/hyrucanji77/TCGS-SEQUENTION-protocol/tree/950f4a59f7b9f0dd8425ffb4fa37e429c3c0b4a5/papers/gravitational_constitution"
+abstract: >-
+  Computational release 4 accompanying manuscript version 5. Five verification
+  suites cover exact boundary responses, constitutive algebra, a nonlinear
+  thin-slab reduction, a matched-gradient discriminator, and conditional
+  empirical-reach calculations. The five program files retain the bytes of
+  the immutable source commit 950f4a59f7b9f0dd8425ffb4fa37e429c3c0b4a5.
+  The 276 checks are finite computational consistency tests, not empirical
+  confirmation or independent quantum-loop calculations.
+keywords:
+  - TCGS-SEQUENTION
+  - constitutive gravity
+  - gauge theory
+  - AQUAL
+  - QUMOND
+  - reproducibility
+preferred-citation:
+  type: generic
+  title: "Gravitational Constitution and Gauge Representation in TCGS–SEQUENTION: Constitutive Response, Geometric Completion, and Quantum Counterterms"
+  authors:
+    - family-names: "Arellano-Peña"
+      given-names: "Henry"
+  year: 2026
+  version: "5"
+  date-published: 2026-11-01
+  notes: "Manuscript version 5; 45 pages; 39 references. No journal acceptance or manuscript DOI is asserted. Computational supplement release 4."
