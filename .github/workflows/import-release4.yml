@@ -68,11 +68,13 @@ jobs:
           reports = {}
           for name, count in expected.items():
               data = json.loads((Path('results') / name).read_text())
-              assert data['number_of_checks'] == count, (name, data['number_of_checks'])
-              assert data['all_checks_passed'] is True, name
-              reports[name] = {'checks': count, 'all_checks_passed': True}
+              observed = data.get('number_of_checks', data.get('n_checks', data.get('total_checks')))
+              passed = data.get('all_checks_passed', data.get('all_passed', data.get('passed') == observed))
+              assert observed == count, (name, observed, count)
+              assert passed is True, name
+              reports[name] = {'checks': observed, 'all_checks_passed': True}
           files = sorted(Path('code').glob('verify_*.py')) + [Path('code/requirements.txt')]
-          summary = {'computational_release': 4, 'manuscript_version': 5, 'source_commit': '950f4a59f7b9f0dd8425ffb4fa37e429c3c0b4a5', 'verified_at_utc': datetime.now(timezone.utc).isoformat(), 'total_checks': sum(expected.values()), 'all_checks_passed': True, 'reports': reports, 'environment': {'python': platform.python_version(), 'numpy': numpy.__version__, 'scipy': scipy.__version__, 'sympy': sympy.__version__, 'mpmath': mpmath.__version__}, 'sha256': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}, 'scope': 'Finite computational consistency checks; no empirical fit or independent quantum-loop calculation.'}
+          summary = {'computational_release': 4, 'manuscript_version': 5, 'source_commit': '950f4a59f7b9f0dd8425ffb4fa37e429c3c0b4a5', 'verified_at_utc': datetime.now(timezone.utc).isoformat(), 'total_checks': sum(v['checks'] for v in reports.values()), 'all_checks_passed': True, 'reports': reports, 'environment': {'python': platform.python_version(), 'numpy': numpy.__version__, 'scipy': scipy.__version__, 'sympy': sympy.__version__, 'mpmath': mpmath.__version__}, 'sha256': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}, 'scope': 'Finite computational consistency checks; no empirical fit or independent quantum-loop calculation.'}
           Path('verification_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
           for p in [*Path('code').rglob('*'), *Path('docs').rglob('*'), *Path('provenance').rglob('*'), *Path('results').rglob('*')]:
               assert p.suffix.lower() not in {'.tex', '.bib', '.sty', '.cls', '.zip', '.aux', '.log', '.fls', '.fdb_latexmk', '.synctex'}, p
