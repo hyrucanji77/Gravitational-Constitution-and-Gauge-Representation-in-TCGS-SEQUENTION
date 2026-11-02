@@ -1,0 +1,37 @@
+# Manuscript source and TeX build products are intentionally not distributed.
+*.tex
+*.ltx
+*.bib
+*.sty
+*.cls
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex*
+*Overleaf*
+*Complete_Package*
+
+# Do not accidentally upload archives containing excluded material.
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Internal compilations are not publication artifacts.
+TCGS-SEQUENTION_core*
+**/TCGS-SEQUENTION_core*
+
+# Local environments and caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
