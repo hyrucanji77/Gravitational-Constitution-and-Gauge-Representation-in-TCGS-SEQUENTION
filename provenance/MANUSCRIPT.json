@@ -1,0 +1,23 @@
+{
+  "title": "Gravitational Constitution and Gauge Representation in TCGS–SEQUENTION: Constitutive Response, Geometric Completion, and Quantum Counterterms",
+  "author": "Henry Arellano-Peña",
+  "manuscript_version": 5,
+  "computational_release": 4,
+  "date": "2026-11-01",
+  "pages": 45,
+  "numbered_references": 39,
+  "tables": 7,
+  "appendices": 6,
+  "pdf_filename": "Gravitational_Constitution_TCGS_SEQUENTION_v5.pdf",
+  "pdf_bytes": 624827,
+  "pdf_sha256": "5b32bbc554f402f9d22fe9f727620e73c3a78946d1275dce3fb505887f1a37b5",
+  "pdf_md5_for_legacy_identification_only": "0ba52bca05c4b2bce8f37e993f84d6f3",
+  "pdf_distribution": "Distributed separately in the source-free publication bundle; not stored in this repository.",
+  "manuscript_modified_for_repository_distribution": false,
+  "latex_sources_distributed": false,
+  "reference_37_repository": "hyrucanji77/TCGS-SEQUENTION-protocol",
+  "reference_37_commit": "950f4a59f7b9f0dd8425ffb4fa37e429c3c0b4a5",
+  "reference_37_directory": "papers/gravitational_constitution",
+  "dedicated_repository": "hyrucanji77/Gravitational-Constitution-and-Gauge-Representation-in-TCGS-SEQUENTION",
+  "license": "CC-BY-4.0"
+}
