@@ -1,0 +1,164 @@
+{
+  "scope": "Conditional field-theory calculations; no observational fit or quantum-loop recomputation.",
+  "statistic": "R_WB = (absolute internal radial force parallel / transverse)^2, same separation and mass.",
+  "background_assumption": "Paired collinear constant fields g_N,b = mu(g_b/a_*) g_b; not assumed for every galaxy.",
+  "references": [
+    "arXiv:0911.5464v2",
+    "arXiv:1509.08457v3",
+    "Lee 2020 dissertation Table 11.4, printed page 134"
+  ],
+  "n_checks": 70,
+  "all_passed": true,
+  "checks": {
+    "QUMOND axis response": true,
+    "AQUAL residual": true,
+    "QUMOND residual": true,
+    "relative response deficit": true,
+    "Newton null with general mass profile": true,
+    "zero radial slope blind case": true,
+    "deep limit axis response": true,
+    "deep limit residual": true,
+    "Fourier transfer ratio": true,
+    "parallel Fourier equality": true,
+    "transverse Fourier equality": true,
+    "oblique Fourier difference": true,
+    "paired interpolation derivative": true,
+    "mu0 logarithmic slope": true,
+    "field matching derivative": true,
+    "QUMOND exterior PDE": true,
+    "QUMOND radial force": true,
+    "QUMOND angular force": true,
+    "distributional source flux": true,
+    "angular difference starts at second order": true,
+    "residual starts at second order": true,
+    "AQUAL product y=0.1": true,
+    "QUMOND residual y=0.1": true,
+    "axis contrast from potential y=0.1": true,
+    "angular monopole integral y=0.1": true,
+    "Fourier axial transfer y=0.1": true,
+    "Fourier oblique separation y=0.1": true,
+    "QUMOND axis contrast below AQUAL y=0.1": true,
+    "spherical inverse relation y=0.1": true,
+    "AQUAL product y=1": true,
+    "QUMOND residual y=1": true,
+    "axis contrast from potential y=1": true,
+    "angular monopole integral y=1": true,
+    "Fourier axial transfer y=1": true,
+    "Fourier oblique separation y=1": true,
+    "QUMOND axis contrast below AQUAL y=1": true,
+    "spherical inverse relation y=1": true,
+    "AQUAL product y=1.8": true,
+    "QUMOND residual y=1.8": true,
+    "axis contrast from potential y=1.8": true,
+    "angular monopole integral y=1.8": true,
+    "Fourier axial transfer y=1.8": true,
+    "Fourier oblique separation y=1.8": true,
+    "QUMOND axis contrast below AQUAL y=1.8": true,
+    "spherical inverse relation y=1.8": true,
+    "AQUAL product y=10": true,
+    "QUMOND residual y=10": true,
+    "axis contrast from potential y=10": true,
+    "angular monopole integral y=10": true,
+    "Fourier axial transfer y=10": true,
+    "Fourier oblique separation y=10": true,
+    "QUMOND axis contrast below AQUAL y=10": true,
+    "spherical inverse relation y=10": true,
+    "local exact ell": true,
+    "local exact spherical slope": true,
+    "local exact QUMOND residual": true,
+    "printed local residual": true,
+    "printed local AQUAL response": true,
+    "printed local QUMOND response": true,
+    "one percent mismatch linear approximation": true,
+    "quoted three sigma residual precision": true,
+    "quoted fractional R precision": true,
+    "quoted fractional axis precision": true,
+    "quoted equal fractional precisions": true,
+    "Lee alpha=2 not excluded at 32 um: absolute_95": true,
+    "Lee alpha=2 excluded at 35 um: absolute_95": true,
+    "Lee alpha=2 not excluded at 32 um: positive_delta_chi2_6.17": true,
+    "Lee alpha=2 excluded at 35 um: positive_delta_chi2_6.17": true,
+    "Lee lower edge rounded micrometres": true,
+    "Lee upper edge rounded micrometres": true
+  },
+  "table_6": [
+    {
+      "y": "0.1",
+      "mu": "0.0995037190209989135665273753739",
+      "ell": "0.990099009900990099009900990099",
+      "nu_exterior": "1.00497512437810945273631840796",
+      "R_A": "1.9900990099009900990099009901",
+      "R_Q": "1.77189596947502302530590763563",
+      "axis_A": "1.41070869065905668964708272618",
+      "axis_Q": "1.3311258278145695364238410596",
+      "T_Q_exterior": "-0.219288627691767904916451032849"
+    },
+    {
+      "y": "1.0",
+      "mu": "0.707106781186547524400844362105",
+      "ell": "0.5",
+      "nu_exterior": "1.33333333333333333333333333333",
+      "R_A": "1.5",
+      "R_Q": "1.44",
+      "axis_A": "1.22474487139158904909864203735",
+      "axis_Q": "1.2",
+      "T_Q_exterior": "-0.08"
+    },
+    {
+      "y": "1.8",
+      "mu": "0.874157276121537762662040803564",
+      "ell": "0.235849056603773584905660377358",
+      "nu_exterior": "1.61832061068702290076335877863",
+      "R_A": "1.23584905660377358490566037736",
+      "R_Q": "1.22209759831935765279780661931",
+      "axis_A": "1.11168748153596367863496850539",
+      "axis_Q": "1.10548523206751054852320675105",
+      "T_Q_exterior": "-0.0222542683686731115027862343998"
+    },
+    {
+      "y": "10.0",
+      "mu": "0.995037190209989135665273753739",
+      "ell": "0.00990099009900990099009900990099",
+      "nu_exterior": "1.98039215686274509803921568627",
+      "R_A": "1.0099009900990099009900990099",
+      "R_Q": "1.0098764832924846514110995171",
+      "axis_A": "1.00493830163797115619294711993",
+      "axis_Q": "1.00492610837438423645320197044",
+      "T_Q_exterior": "-0.0000485330874323570093911524181611"
+    }
+  ],
+  "sensitivity_y_1_8": {
+    "relative_R_separation": "0.0111271341843365557513931171999",
+    "relative_axis_separation": "0.00557913044040379801428977576933",
+    "sigma_T_for_nominal_3_sigma": "0.00741808945622437050092874479992",
+    "fractional_sigma_R_if_slope_exact": "0.00375078016227375294061164722262",
+    "fractional_sigma_axis_if_slope_exact": "0.00187539008113687647030582361131",
+    "equal_independent_fractional_sigma_nu_R": "0.0026522020874837498364691519415",
+    "dlogR_dlogg": "-0.291660665418407028661961688031",
+    "one_percent_mismatch_exact_T": "-0.00580236588899110156319939849697",
+    "one_percent_mismatch_linear_T": "-0.00583321330836814057323923376062"
+  },
+  "lee_conventions": {
+    "absolute_95": {
+      "lambda_um": [
+        32,
+        35
+      ],
+      "alpha_limit": [
+        "2.08",
+        "1.45"
+      ],
+      "definition": "Integral of fitted normal density from -a to +a is 0.95."
+    },
+    "positive_delta_chi2_6.17": {
+      "lambda_um": [
+        32,
+        35
+      ],
+      "alpha_limit": [
+        "2.56",
+        "1.77"
+      ]
+    }
+  }
+}

@@ -1,0 +1,5 @@
+Source repository: hyrucanji77/TCGS-SEQUENTION-protocol
+Commit: 950f4a59f7b9f0dd8425ffb4fa37e429c3c0b4a5
+Directory: papers/gravitational_constitution
+Computational release: 4
+Manuscript version: 5

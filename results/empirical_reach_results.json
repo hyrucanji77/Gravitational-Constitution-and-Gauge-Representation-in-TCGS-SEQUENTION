@@ -1,0 +1,771 @@
+{
+  "scope": "Finite algebraic and numerical checks; no catalogue fit or observing-window certification.",
+  "inputs": {
+    "GM_total_m3_s2": "265424880000000000000.0",
+    "a_star_m_s2": "0.00000000012",
+    "y_background": "1.8",
+    "width_benchmark_m": "0.00011",
+    "tidal_benchmark_pc": "1.7",
+    "au_m": "149597870700.0",
+    "pc_m": "30856775814913672.78913938",
+    "c_m_s": "299792458.0"
+  },
+  "checks": [
+    {
+      "name": "parsec conversion",
+      "passed": true,
+      "actual": "30856775814913672.78913938",
+      "expected": "30856775814913673.0",
+      "rtol": "3e-17",
+      "atol": "0"
+    },
+    {
+      "name": "Newtonian force at 10 kAU",
+      "passed": true,
+      "actual": "1.186016703630560079596953e-10",
+      "expected": "1.1860167036305601e-10",
+      "rtol": "1e-15",
+      "atol": "0"
+    },
+    {
+      "name": "external transition radius pc",
+      "passed": true,
+      "actual": "0.03842364893548668137682953",
+      "expected": "0.03842364893548668",
+      "rtol": "3e-16",
+      "atol": "0"
+    },
+    {
+      "name": "single-scale cosmological width m",
+      "passed": true,
+      "actual": "7.489626489473480333333333e+26",
+      "expected": "7.48962648947348e+26",
+      "rtol": "2e-16",
+      "atol": "0"
+    },
+    {
+      "name": "dimensionless scale hierarchy",
+      "passed": true,
+      "actual": "1.468698073990776330469799e-31",
+      "expected": "1.4686980739907764e-31",
+      "rtol": "2e-16",
+      "atol": "0"
+    },
+    {
+      "name": "cosmological width exceeds lab benchmark by 30 orders",
+      "passed": true
+    },
+    {
+      "name": "laboratory 1-mu",
+      "passed": true,
+      "actual": "7.481599940147200478821557e-23",
+      "expected": "7.481599940147200478822396e-23",
+      "rtol": "2e-22",
+      "atol": "0"
+    },
+    {
+      "name": "laboratory log slope",
+      "passed": true,
+      "actual": "1.496319988029440095764255e-22",
+      "expected": "1.496319988029440095764479e-22",
+      "rtol": "2e-22",
+      "atol": "0"
+    },
+    {
+      "name": "laboratory anisotropy below 2e-22",
+      "passed": true
+    },
+    {
+      "name": "high-field mu expansion",
+      "passed": true
+    },
+    {
+      "name": "high-field slope expansion",
+      "passed": true
+    },
+    {
+      "name": "finite-width expansion",
+      "passed": true
+    },
+    {
+      "name": "exact/leading width correction 10 kAU",
+      "passed": true,
+      "actual": "1.802242768139617878967378e-39",
+      "expected": "1.802242768139617878967378e-39",
+      "rtol": "1e-35",
+      "atol": "0"
+    },
+    {
+      "name": "printed width correction 10 kAU",
+      "passed": true,
+      "actual": "1.802242768139617878967378e-39",
+      "expected": "1.802242768139618e-39",
+      "rtol": "4e-16",
+      "atol": "0"
+    },
+    {
+      "name": "width is negligible versus 1e-3 at 10 kAU",
+      "passed": true
+    },
+    {
+      "name": "exact/leading width correction 20 pc",
+      "passed": true,
+      "actual": "1.059017248958228614473792e-44",
+      "expected": "1.059017248958228614473792e-44",
+      "rtol": "1e-35",
+      "atol": "0"
+    },
+    {
+      "name": "printed width correction 20 pc",
+      "passed": true,
+      "actual": "1.059017248958228614473792e-44",
+      "expected": "1.0590172489582289e-44",
+      "rtol": "4e-16",
+      "atol": "0"
+    },
+    {
+      "name": "width is negligible versus 1e-3 at 20 pc",
+      "passed": true
+    },
+    {
+      "name": "exact/leading width correction 1 kpc",
+      "passed": true,
+      "actual": "4.236068995832914457895169e-48",
+      "expected": "4.236068995832914457895169e-48",
+      "rtol": "1e-35",
+      "atol": "0"
+    },
+    {
+      "name": "printed width correction 1 kpc",
+      "passed": true,
+      "actual": "4.236068995832914457895169e-48",
+      "expected": "4.236068995832915e-48",
+      "rtol": "4e-16",
+      "atol": "0"
+    },
+    {
+      "name": "width is negligible versus 1e-3 at 1 kpc",
+      "passed": true
+    },
+    {
+      "name": "Newtonian internal/background 10 kAU",
+      "passed": true,
+      "actual": "0.5490818072363704072208114",
+      "expected": "0.5490818072363705",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "linear maximum-axis/background 10 kAU",
+      "passed": true,
+      "actual": "0.6281270227167099095475053",
+      "expected": "0.62812702271671",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "tidal proxy 10 kAU",
+      "passed": true,
+      "actual": "0.00002319411661315579394186971",
+      "expected": "0.000023194116613155793",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "transition-radius scaling 10 kAU",
+      "passed": true,
+      "actual": "0.6281270227167099095475053",
+      "expected": "0.6281270227167099095475053",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "Newtonian internal/background 0.1 pc",
+      "passed": true,
+      "actual": "0.1290585519846960307664245",
+      "expected": "0.129058551984696",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "linear maximum-axis/background 0.1 pc",
+      "passed": true,
+      "actual": "0.1476376797517526782958237",
+      "expected": "0.1476376797517527",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "tidal proxy 0.1 pc",
+      "passed": true,
+      "actual": "0.0002035416242621616120496642",
+      "expected": "0.0002035416242621617",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "transition-radius scaling 0.1 pc",
+      "passed": true,
+      "actual": "0.1476376797517526782958237",
+      "expected": "0.1476376797517526782958237",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "Newtonian internal/background 0.2 pc",
+      "passed": true,
+      "actual": "0.03226463799617400769160612",
+      "expected": "0.032264637996174",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "linear maximum-axis/background 0.2 pc",
+      "passed": true,
+      "actual": "0.03690941993793816957395593",
+      "expected": "0.03690941993793816",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "tidal proxy 0.2 pc",
+      "passed": true,
+      "actual": "0.001628332994097292896397313",
+      "expected": "0.001628332994097293",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "transition-radius scaling 0.2 pc",
+      "passed": true,
+      "actual": "0.03690941993793816957395593",
+      "expected": "0.03690941993793816957395593",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "Newtonian internal/background 0.5 pc",
+      "passed": true,
+      "actual": "0.00516234207938784123065698",
+      "expected": "0.005162342079387841",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "linear maximum-axis/background 0.5 pc",
+      "passed": true,
+      "actual": "0.005905507190070107131832949",
+      "expected": "0.005905507190070107",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "tidal proxy 0.5 pc",
+      "passed": true,
+      "actual": "0.02544270303277020150620802",
+      "expected": "0.0254427030327702",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "transition-radius scaling 0.5 pc",
+      "passed": true,
+      "actual": "0.005905507190070107131832949",
+      "expected": "0.005905507190070107131832949",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "Newtonian internal/background 1 pc",
+      "passed": true,
+      "actual": "0.001290585519846960307664245",
+      "expected": "0.0012905855198469603",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "linear maximum-axis/background 1 pc",
+      "passed": true,
+      "actual": "0.001476376797517526782958237",
+      "expected": "0.001476376797517527",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "tidal proxy 1 pc",
+      "passed": true,
+      "actual": "0.2035416242621616120496642",
+      "expected": "0.2035416242621616",
+      "rtol": "8e-16",
+      "atol": "0"
+    },
+    {
+      "name": "transition-radius scaling 1 pc",
+      "passed": true,
+      "actual": "0.001476376797517526782958237",
+      "expected": "0.001476376797517526782958237",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "tidal upper separation pc",
+      "passed": true,
+      "actual": "0.17",
+      "expected": "0.17",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "conditional lower separation p=1",
+      "passed": true,
+      "actual": "1.215062466508420620862033",
+      "expected": "1.2150624665084204",
+      "rtol": "5e-16",
+      "atol": "0"
+    },
+    {
+      "name": "nonlinear budget at lower p=1",
+      "passed": true,
+      "actual": "0.001",
+      "expected": "0.001",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "unit-coefficient uncorrected window empty p=1",
+      "passed": true
+    },
+    {
+      "name": "window threshold coefficient p=1",
+      "passed": true,
+      "actual": "5245651888535324.374153695",
+      "expected": "5245651888535324.374153695",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "conditional lower separation p=2",
+      "passed": true,
+      "actual": "0.2160720566103032616558747",
+      "expected": "0.21607205661030326",
+      "rtol": "5e-16",
+      "atol": "0"
+    },
+    {
+      "name": "nonlinear budget at lower p=2",
+      "passed": true,
+      "actual": "0.001",
+      "expected": "0.001",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "unit-coefficient uncorrected window empty p=2",
+      "passed": true
+    },
+    {
+      "name": "window threshold coefficient p=2",
+      "passed": true,
+      "actual": "5245651888535324.374153695",
+      "expected": "5245651888535324.374153695",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "tidal-budget touching endpoints p=1",
+      "passed": true,
+      "actual": "37492910130166387.95390777",
+      "expected": "37492910130166387.95390777",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "nonlinear-budget touching endpoints p=1",
+      "passed": true,
+      "actual": "5245651888535324.374153695",
+      "expected": "5245651888535324.374153695",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "below tidal threshold closed p=1",
+      "passed": true
+    },
+    {
+      "name": "above tidal threshold open p=1",
+      "passed": true
+    },
+    {
+      "name": "below nonlinear threshold closed p=1",
+      "passed": true
+    },
+    {
+      "name": "above nonlinear threshold open p=1",
+      "passed": true
+    },
+    {
+      "name": "tidal-budget touching endpoints p=2",
+      "passed": true,
+      "actual": "6667287010691463.666086526",
+      "expected": "6667287010691463.666086526",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "nonlinear-budget touching endpoints p=2",
+      "passed": true,
+      "actual": "5245651888535324.374153695",
+      "expected": "5245651888535324.374153695",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "below tidal threshold closed p=2",
+      "passed": true
+    },
+    {
+      "name": "above tidal threshold open p=2",
+      "passed": true
+    },
+    {
+      "name": "below nonlinear threshold closed p=2",
+      "passed": true
+    },
+    {
+      "name": "above nonlinear threshold open p=2",
+      "passed": true
+    },
+    {
+      "name": "p2 endpoint ratio",
+      "passed": true,
+      "actual": "1.271012097707666245034557",
+      "expected": "1.2710120977076662",
+      "rtol": "4e-16",
+      "atol": "0"
+    },
+    {
+      "name": "p2 critical tidal tolerance",
+      "passed": true,
+      "actual": "0.002053284140956961796045162",
+      "expected": "0.002053284140956962",
+      "rtol": "5e-16",
+      "atol": "0"
+    },
+    {
+      "name": "p2 critical nonlinear tolerance",
+      "passed": true,
+      "actual": "0.002609748983187591477160267",
+      "expected": "0.002609748983187591",
+      "rtol": "7e-16",
+      "atol": "0"
+    },
+    {
+      "name": "general threshold reciprocal identity",
+      "passed": true
+    },
+    {
+      "name": "p2 tidal tolerance 0.0021 opens interval",
+      "passed": true
+    },
+    {
+      "name": "p2 nonlinear tolerance 0.0027 opens interval",
+      "passed": true
+    },
+    {
+      "name": "p2 tidal tolerance 0.002 remains closed",
+      "passed": true
+    },
+    {
+      "name": "p2 nonlinear tolerance 0.0026 remains closed",
+      "passed": true
+    },
+    {
+      "name": "quadratic constitutive Taylor component 0",
+      "passed": true
+    },
+    {
+      "name": "quadratic flux even under inversion component 0",
+      "passed": true
+    },
+    {
+      "name": "quadratic constitutive Taylor component 1",
+      "passed": true
+    },
+    {
+      "name": "quadratic flux even under inversion component 1",
+      "passed": true
+    },
+    {
+      "name": "quadratic constitutive Taylor component 2",
+      "passed": true
+    },
+    {
+      "name": "quadratic flux even under inversion component 2",
+      "passed": true
+    },
+    {
+      "name": "parallel coefficient closed form",
+      "passed": true
+    },
+    {
+      "name": "parallel coefficient from direct second derivative",
+      "passed": true
+    },
+    {
+      "name": "parallel local coefficient rounded",
+      "passed": true,
+      "actual": "-0.02790580440731672187815066",
+      "expected": "-0.02790580440731672",
+      "rtol": "1e-15",
+      "atol": "0"
+    },
+    {
+      "name": "local coefficient not unity",
+      "passed": true
+    },
+    {
+      "name": "parallel coefficient crosses sign",
+      "passed": true
+    },
+    {
+      "name": "observed residual mass-slope derivative",
+      "passed": true
+    },
+    {
+      "name": "spherical mass-profile slope",
+      "passed": true
+    },
+    {
+      "name": "local flux residual eta=0",
+      "passed": true,
+      "actual": "-2.454546732648863276547886e-91",
+      "expected": "0.0",
+      "rtol": "1e-65",
+      "atol": "1e-80"
+    },
+    {
+      "name": "QUMOND mass-profile residual eta=0",
+      "passed": true,
+      "actual": "-0.02225426836867311150278623",
+      "expected": "-0.02225426836867311150278623",
+      "rtol": "1e-65",
+      "atol": "1e-80"
+    },
+    {
+      "name": "local flux residual eta=1",
+      "passed": true,
+      "actual": "-1.227273366324431638273943e-91",
+      "expected": "0.0",
+      "rtol": "1e-65",
+      "atol": "1e-80"
+    },
+    {
+      "name": "QUMOND mass-profile residual eta=1",
+      "passed": true,
+      "actual": "-0.01112713418433655575139312",
+      "expected": "-0.01112713418433655575139312",
+      "rtol": "1e-65",
+      "atol": "1e-80"
+    },
+    {
+      "name": "local flux residual eta=2",
+      "passed": true,
+      "actual": "0.0",
+      "expected": "0.0",
+      "rtol": "1e-65",
+      "atol": "1e-80"
+    },
+    {
+      "name": "QUMOND mass-profile residual eta=2",
+      "passed": true,
+      "actual": "0.0",
+      "expected": "0.0",
+      "rtol": "1e-65",
+      "atol": "1e-80"
+    },
+    {
+      "name": "eta one QUMOND residual",
+      "passed": true,
+      "actual": "-0.01112713418433655575139312",
+      "expected": "-0.01112713418433655575",
+      "rtol": "2e-15",
+      "atol": "0"
+    },
+    {
+      "name": "eta one 3-sigma budget",
+      "passed": true,
+      "actual": "0.003709044728112185250464373",
+      "expected": "0.00370904472811218525",
+      "rtol": "2e-15",
+      "atol": "0"
+    },
+    {
+      "name": "environment/selected acceleration",
+      "passed": true,
+      "actual": "0.05555555555555555555555556",
+      "expected": "0.05555555555555555555555556",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "squared environmental ratio",
+      "passed": true,
+      "actual": "0.00308641975308641975308642",
+      "expected": "0.00308641975308641975308642",
+      "rtol": "1e-65",
+      "atol": "0"
+    },
+    {
+      "name": "full covariance propagation",
+      "passed": true
+    },
+    {
+      "name": "nonnegative correlated variance example 1",
+      "passed": true
+    },
+    {
+      "name": "covariance as squared projection example 1",
+      "passed": true
+    },
+    {
+      "name": "nonnegative correlated variance example 2",
+      "passed": true
+    },
+    {
+      "name": "covariance as squared projection example 2",
+      "passed": true
+    },
+    {
+      "name": "nonnegative correlated variance example 3",
+      "passed": true
+    },
+    {
+      "name": "covariance as squared projection example 3",
+      "passed": true
+    }
+  ],
+  "total_checks": 100,
+  "passed": 100,
+  "width_suppression": [
+    {
+      "scale": "10 kAU",
+      "qL": "7.353045834495290045595549e-20",
+      "qL_squared": "5.406728304418853636902135e-39",
+      "relative_kernel_deficit": "1.802242768139617878967378e-39"
+    },
+    {
+      "scale": "20 pc",
+      "qL": "1.782428609194400762780728e-22",
+      "qL_squared": "3.177051746874685843421376e-44",
+      "relative_kernel_deficit": "1.059017248958228614473792e-44"
+    },
+    {
+      "scale": "1 kpc",
+      "qL": "3.564857218388801525561456e-24",
+      "qL_squared": "1.270820698749874337368551e-47",
+      "relative_kernel_deficit": "4.236068995832914457895169e-48"
+    }
+  ],
+  "binary_regime_diagnostics": [
+    {
+      "separation": "10 kAU",
+      "separation_pc": "0.04848136811095359935899141",
+      "epsilon_N": "0.5490818072363704072208114",
+      "epsilon_A": "0.6281270227167099095475053",
+      "Newtonian_tidal_proxy": "0.00002319411661315579394186971"
+    },
+    {
+      "separation": "0.1 pc",
+      "separation_pc": "0.1",
+      "epsilon_N": "0.1290585519846960307664245",
+      "epsilon_A": "0.1476376797517526782958237",
+      "Newtonian_tidal_proxy": "0.0002035416242621616120496642"
+    },
+    {
+      "separation": "0.2 pc",
+      "separation_pc": "0.2",
+      "epsilon_N": "0.03226463799617400769160612",
+      "epsilon_A": "0.03690941993793816957395593",
+      "Newtonian_tidal_proxy": "0.001628332994097292896397313"
+    },
+    {
+      "separation": "0.5 pc",
+      "separation_pc": "0.5",
+      "epsilon_N": "0.00516234207938784123065698",
+      "epsilon_A": "0.005905507190070107131832949",
+      "Newtonian_tidal_proxy": "0.02544270303277020150620802"
+    },
+    {
+      "separation": "1 pc",
+      "separation_pc": "1.0",
+      "epsilon_N": "0.001290585519846960307664245",
+      "epsilon_A": "0.001476376797517526782958237",
+      "Newtonian_tidal_proxy": "0.2035416242621616120496642"
+    }
+  ],
+  "conditional_windows": [
+    {
+      "order": 1,
+      "C_p": "1",
+      "nonlinear_budget": ".001",
+      "tidal_budget": ".001",
+      "lower_pc": "1.215062466508420620862033",
+      "upper_pc": "0.17",
+      "maximum_C_p_for_nonempty_window": "0.01957494865036776908815269"
+    },
+    {
+      "order": 2,
+      "C_p": "1",
+      "nonlinear_budget": ".001",
+      "tidal_budget": ".001",
+      "lower_pc": "0.2160720566103032616558747",
+      "upper_pc": "0.17",
+      "maximum_C_p_for_nonempty_window": "0.3831786146645349445314277"
+    }
+  ],
+  "tolerance_opening_thresholds": [
+    {
+      "order": 1,
+      "C_p": "1",
+      "held_tolerance": ".001",
+      "tidal_threshold": "0.3651312910823222428541509",
+      "nonlinear_threshold": "0.0510857023362466014864442",
+      "lower_to_upper_ratio": "7.147426273578944828600194"
+    },
+    {
+      "order": 2,
+      "C_p": "1",
+      "held_tolerance": ".001",
+      "tidal_threshold": "0.002053284140956961796045162",
+      "nonlinear_threshold": "0.002609748983187591477160267",
+      "lower_to_upper_ratio": "1.271012097707666245034557"
+    }
+  ],
+  "mass_profile_sensitivity": [
+    {
+      "eta_M": 0,
+      "slope": "1.618320610687022900763359",
+      "T_Q": "-0.02225426836867311150278623",
+      "three_sigma_allowance": "0.007418089456224370500928745"
+    },
+    {
+      "eta_M": 1,
+      "slope": "0.8091603053435114503816794",
+      "T_Q": "-0.01112713418433655575139312",
+      "three_sigma_allowance": "0.003709044728112185250464372"
+    },
+    {
+      "eta_M": 2,
+      "slope": "0.0",
+      "T_Q": "0.0",
+      "three_sigma_allowance": "0.0"
+    }
+  ],
+  "parallel_local_flux_coefficient": "-0.02790580440731672187815066",
+  "limitations": [
+    "The width is a single-Yukawa historical benchmark, not a full-tower likelihood.",
+    "The local flux Taylor coefficient does not bound a nonlinear two-star solution.",
+    "The tidal scale and C_p are diagnostic assumptions, not irreducible noise models.",
+    "The environmental field ratios are not calculated biases of the matched residual."
+  ]
+}

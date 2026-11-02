@@ -1,0 +1,100 @@
+{
+  "description": "Reproduce the additional algebraic and spectral checks in the article.\n\nNo experiment is fitted and no quantum loop integral is recomputed. The Lee\n2020 entries are transcribed historical two-sided 95% confidence limits, not a\nlikelihood or an exclusion bound on the complete slab tower.\n",
+  "number_of_checks": 53,
+  "all_checks_passed": true,
+  "checks": {
+    "single internal diagonal block rank = 20": true,
+    "single internal off-diagonal block rank = 35": true,
+    "four-field dynamic rank = 290": true,
+    "four-field constant null sector = 10": true,
+    "compact image sum r/L=0.25": true,
+    "Dirichlet half-integer potential r/L=0.25": true,
+    "first-Yukawa remainder ratio r/L=0.25": true,
+    "compact image sum r/L=0.5": true,
+    "Dirichlet half-integer potential r/L=0.5": true,
+    "first-Yukawa remainder ratio r/L=0.5": true,
+    "compact image sum r/L=1": true,
+    "Dirichlet half-integer potential r/L=1": true,
+    "first-Yukawa remainder ratio r/L=1": true,
+    "compact image sum r/L=2": true,
+    "Dirichlet half-integer potential r/L=2": true,
+    "first-Yukawa remainder ratio r/L=2": true,
+    "compact image sum r/L=4": true,
+    "Dirichlet half-integer potential r/L=4": true,
+    "first-Yukawa remainder ratio r/L=4": true,
+    "Dirichlet resolvent k=0.1": true,
+    "Dirichlet resolvent k=1": true,
+    "Dirichlet resolvent k=4": true,
+    "Dirichlet force derivative": true,
+    "common ultraviolet pole coefficient": true,
+    "Dirichlet exponential infrared coefficient": true,
+    "anisotropic extension equation": true,
+    "anisotropic reflecting face": true,
+    "anisotropic upper trace": true,
+    "anisotropic upper flux": true,
+    "normalized tangent kernel L2 coefficient": true,
+    "normalized tangent kernel L4 coefficient": true,
+    "thin-slab tangential coefficient": true,
+    "thin-slab normal coefficient": true,
+    "thin-slab net energy coefficient": true,
+    "matched isolated-gradient residual y=0.1": true,
+    "matched extended-source residual y=0.1": true,
+    "axis-force ratio squared y=0.1": true,
+    "slab-sector transfer y=0.1": true,
+    "matched isolated-gradient residual y=1": true,
+    "matched extended-source residual y=1": true,
+    "axis-force ratio squared y=1": true,
+    "slab-sector transfer y=1": true,
+    "matched isolated-gradient residual y=10": true,
+    "matched extended-source residual y=10": true,
+    "axis-force ratio squared y=10": true,
+    "slab-sector transfer y=10": true,
+    "pinned-v6 s deficit": true,
+    "pinned-v6 p deficit": true,
+    "pinned-v6 polarization difference": true,
+    "pinned-v6 total-angle s prefactor": true,
+    "alpha-two crossing bracket": true,
+    "quoted L lower bracket rounding": true,
+    "quoted L upper bracket rounding": true
+  },
+  "constitutive_block_ranks": {
+    "symmetric": 20,
+    "cross": 35
+  },
+  "historical_yukawa_input": {
+    "source": "John G. Lee, A Fourier-Bessel Test of the Gravitational Inverse-Square Law (2020), Table 11.4, printed p. 134",
+    "url": "https://digital.lib.washington.edu/researchworks/bitstreams/6013936a-da00-42b7-ba0a-4dff0cb05bf8/download",
+    "convention": "two-sided 95% |alpha| limit for one Yukawa, not the full tower",
+    "rows": [
+      {
+        "lambda_um": 32,
+        "abs_alpha_95": 2.08
+      },
+      {
+        "lambda_um": 35,
+        "abs_alpha_95": 1.45
+      }
+    ],
+    "alpha_compared": 2,
+    "L_crossing_bracket_um": [
+      100.53096491487338,
+      109.95574287564277
+    ],
+    "claimed_tower_exclusion": false
+  },
+  "light_coefficients": {
+    "version": "2505.14446v6",
+    "date": "2025-09-16",
+    "printed_page": 4,
+    "source_equations": [
+      26,
+      27,
+      28
+    ],
+    "pi_coefficients": [
+      "23/8",
+      "11/4",
+      "15/4"
+    ]
+  }
+}

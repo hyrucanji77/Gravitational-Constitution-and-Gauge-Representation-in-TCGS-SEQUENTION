@@ -1,0 +1,118 @@
+{
+  "description": "Analytic identities and dimensionless model illustrations; no empirical fit.",
+  "all_checks_passed": true,
+  "number_of_checks": 30,
+  "checks": {
+    "AQUAL antiderivative": true,
+    "logarithmic susceptibility": true,
+    "spherical root squared": true,
+    "response-slope product": true,
+    "slab harmonic extension": true,
+    "reflecting face": true,
+    "Dirichlet face": true,
+    "Neumann response": true,
+    "alternative boundary response": true,
+    "point-source force": true,
+    "force monotonicity": true,
+    "slab energy identity k=0.1": true,
+    "spectral resolvent k=0.1": true,
+    "slab energy identity k=1.0": true,
+    "spectral resolvent k=1.0": true,
+    "slab energy identity k=4.0": true,
+    "spectral resolvent k=4.0": true,
+    "Yukawa sum r/L=0.25": true,
+    "Yukawa sum r/L=1.0": true,
+    "Yukawa sum r/L=3.0": true,
+    "anisotropic Green equation away from source": true,
+    "nonintegrable susceptibility obstruction equals one": true,
+    "transverse tensor": true,
+    "projector composition": true,
+    "out-of-plane 2PN deficit": true,
+    "in-plane 2PN deficit": true,
+    "2PN polarization splitting": true,
+    "illustrative force bound eps=0.1": true,
+    "illustrative force bound eps=0.01": true,
+    "illustrative force bound eps=0.001": true
+  },
+  "slab_response": [
+    {
+      "r_over_L": "0.25",
+      "potential_ratio": 2.6760524897429128,
+      "force_ratio": 5.095572427423139
+    },
+    {
+      "r_over_L": "0.5",
+      "potential_ratio": 1.524868618822064,
+      "force_ratio": 2.5656973537982144
+    },
+    {
+      "r_over_L": "1",
+      "potential_ratio": 1.0903314107273683,
+      "force_ratio": 1.3869332340048703
+    },
+    {
+      "r_over_L": "2",
+      "potential_ratio": 1.0037418731973213,
+      "force_ratio": 1.0272967432629598
+    },
+    {
+      "r_over_L": "4",
+      "potential_ratio": 1.0000069747090357,
+      "force_ratio": 1.00009462179336
+    }
+  ],
+  "illustrative_bounds_not_measurements": [
+    {
+      "epsilon": "0.1",
+      "z_min": 2.3814172999690633,
+      "L_over_r_max": 0.6596056587038746
+    },
+    {
+      "epsilon": "0.01",
+      "z_min": 3.7156971705449626,
+      "L_over_r_max": 0.4227460567149814
+    },
+    {
+      "epsilon": "0.001",
+      "z_min": 4.999386478698484,
+      "L_over_r_max": 0.31419781876992037
+    }
+  ],
+  "aqual_response": [
+    {
+      "y": "0.1",
+      "mu": 0.09950371902099892,
+      "longitudinal_over_transverse": 1.99009900990099,
+      "radial_slope": 1.0049751243781095
+    },
+    {
+      "y": "1",
+      "mu": 0.7071067811865476,
+      "longitudinal_over_transverse": 1.5,
+      "radial_slope": 1.3333333333333333
+    },
+    {
+      "y": "10",
+      "mu": 0.9950371902099892,
+      "longitudinal_over_transverse": 1.00990099009901,
+      "radial_slope": 1.9803921568627452
+    }
+  ],
+  "slab_derivative_expansion": [
+    {
+      "kL": "0.1",
+      "exact_normalized_kernel": 0.9966799462495581,
+      "quadratic_relative_error": 1.3323818685702189e-05
+    },
+    {
+      "kL": "0.25",
+      "exact_normalized_kernel": 0.9796746496148365,
+      "quadratic_relative_error": 0.0005185220913591734
+    },
+    {
+      "kL": "0.5",
+      "exact_normalized_kernel": 0.9242343145200195,
+      "quadratic_relative_error": 0.008188018703117445
+    }
+  ]
+}
