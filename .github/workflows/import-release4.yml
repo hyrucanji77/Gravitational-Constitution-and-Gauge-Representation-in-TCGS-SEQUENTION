@@ -1,0 +1,92 @@
+name: Import and verify computational release 4
+
+on:
+  push:
+    paths:
+      - '.github/workflows/import-release4.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-computational-release4
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - name: Obtain the pinned source and verify program checksums
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_dir=$(mktemp -d)
+          git -C "$source_dir" init -q
+          git -C "$source_dir" remote add origin https://github.com/hyrucanji77/TCGS-SEQUENTION-protocol.git
+          git -C "$source_dir" fetch -q --depth=1 origin 950f4a59f7b9f0dd8425ffb4fa37e429c3c0b4a5
+          git -C "$source_dir" checkout -q --detach FETCH_HEAD
+          test "$(git -C "$source_dir" rev-parse HEAD)" = 950f4a59f7b9f0dd8425ffb4fa37e429c3c0b4a5
+          source_path="$source_dir/papers/gravitational_constitution"
+          mkdir -p code docs provenance results
+          for filename in verify_results.py verify_extensions.py verify_nonlinear_slab.py verify_model_discrimination.py verify_empirical_reach.py requirements.txt SHA256SUMS.txt; do
+            cp "$source_path/code/$filename" "code/$filename"
+          done
+          (cd code && sha256sum -c SHA256SUMS.txt)
+          cp "$source_path/LICENSE.txt" LICENSE.txt
+          cp "$source_path/SOURCE_PROVENANCE.md" docs/SOURCE_PROVENANCE.md
+          cp "$source_path/EMPIRICAL_REACH.md" docs/EMPIRICAL_REACH.md
+          cp "$source_path/verification_summary.json" provenance/release4_verification_summary.json
+          cp "$source_path/RELEASE.json" provenance/RELEASE.json
+          cp "$source_path/tolerance_thresholds.json" results/tolerance_thresholds.json
+          printf '%s\n' 'Source repository: hyrucanji77/TCGS-SEQUENTION-protocol' 'Commit: 950f4a59f7b9f0dd8425ffb4fa37e429c3c0b4a5' 'Directory: papers/gravitational_constitution' 'Computational release: 4' 'Manuscript version: 5' > provenance/CODE_SNAPSHOT.txt
+          rm -rf "$source_dir"
+      - name: Install the pinned numerical environment
+        run: python -m pip install -r code/requirements.txt
+      - name: Run all five suites
+        shell: bash
+        run: |
+          set -euo pipefail
+          python code/verify_results.py --output results/results.json
+          python code/verify_extensions.py --output results/extension_results.json
+          python code/verify_nonlinear_slab.py --output results/nonlinear_slab_results.json
+          python code/verify_model_discrimination.py --output results/model_discrimination_results.json
+          python code/verify_empirical_reach.py --output results/empirical_reach_results.json
+          python - <<'PY'
+          import hashlib, json, platform
+          from datetime import datetime, timezone
+          from pathlib import Path
+          import mpmath, numpy, scipy, sympy
+          expected = {'results.json': 30, 'extension_results.json': 53, 'nonlinear_slab_results.json': 23, 'model_discrimination_results.json': 70, 'empirical_reach_results.json': 100}
+          reports = {}
+          for name, count in expected.items():
+              data = json.loads((Path('results') / name).read_text())
+              assert data['number_of_checks'] == count, (name, data['number_of_checks'])
+              assert data['all_checks_passed'] is True, name
+              reports[name] = {'checks': count, 'all_checks_passed': True}
+          files = sorted(Path('code').glob('verify_*.py')) + [Path('code/requirements.txt')]
+          summary = {'computational_release': 4, 'manuscript_version': 5, 'source_commit': '950f4a59f7b9f0dd8425ffb4fa37e429c3c0b4a5', 'verified_at_utc': datetime.now(timezone.utc).isoformat(), 'total_checks': sum(expected.values()), 'all_checks_passed': True, 'reports': reports, 'environment': {'python': platform.python_version(), 'numpy': numpy.__version__, 'scipy': scipy.__version__, 'sympy': sympy.__version__, 'mpmath': mpmath.__version__}, 'sha256': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}, 'scope': 'Finite computational consistency checks; no empirical fit or independent quantum-loop calculation.'}
+          Path('verification_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
+          for p in [*Path('code').rglob('*'), *Path('docs').rglob('*'), *Path('provenance').rglob('*'), *Path('results').rglob('*')]:
+              assert p.suffix.lower() not in {'.tex', '.bib', '.sty', '.cls', '.zip', '.aux', '.log', '.fls', '.fdb_latexmk', '.synctex'}, p
+          print('276/276 checks passed; no manuscript source or source-containing archives.')
+          PY
+      - name: Commit verified computational release
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add code docs provenance results LICENSE.txt verification_summary.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish release-4 programs and 276-check numerical reports'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
